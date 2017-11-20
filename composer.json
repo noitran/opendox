@@ -1,0 +1,47 @@
+{
+    "name": "iocaste/opendox",
+    "description": "Swagger OpenApi 3.0.0 package for Lumen 5.5 and Laravel 5.5 with REDOC UI",
+    "authors": [
+        {
+            "name": "Nikita.N",
+            "email": "iocaste.systems@gmail.com"
+        }
+    ],
+    "keywords": [
+        "api",
+        "openapi",
+        "swagger",
+        "swagger-ui",
+        "laravel",
+        "lumen",
+        "rest",
+        "documentation",
+        "redoc",
+        "redoc-ui"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0",
+        "symfony/yaml": "^3.3"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "phpunit/phpunit": "~6.0",
+        "mockery/mockery": "~0.9",
+        "franzl/studio": "^0.12.0",
+        "laravel/lumen-framework": "~5.5",
+        "illuminate/support": "~5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iocaste\\Laradox\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
