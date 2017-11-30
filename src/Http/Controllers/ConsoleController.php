@@ -6,9 +6,9 @@ use Illuminate\View\View;
 use Laravel\Lumen\Routing\Controller as BaseController;
 
 /**
- * Class UiController
+ * Class ConsoleController
  */
-class UiController extends BaseController
+class ConsoleController extends BaseController
 {
     /**
      * @return View
@@ -18,7 +18,7 @@ class UiController extends BaseController
         $settings = config('laradox.documentation_source');
         $filePath = url('api-docs/' . $settings['filename'] . '.json');
 
-        return view('laradox::redoc.index', [
+        return view('laradox::swagger.index', [
             'documentationFile' => $filePath,
         ]);
     }

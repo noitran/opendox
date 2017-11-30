@@ -62,9 +62,21 @@ return [
         'ui' => [
 
             /*
-             * Route for accessing Swagger/Redoc UI API interface
+             * Route for accessing Redoc UI API interface
              */
             'route' => '/api/documentation',
+
+            'middleware' => [
+                //
+            ],
+        ],
+
+        'console' => [
+
+            /*
+             * Route for accessing Swagger UI API interface
+             */
+            'route' => '/api/console',
 
             'middleware' => [
                 //
