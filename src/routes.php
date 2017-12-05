@@ -18,3 +18,12 @@ $router->get(
         'uses' => 'Http\Controllers\UiController@index',
     ]
 );
+
+$router->get(
+    config('laradox.routing.console.route'),
+    [
+        'as' => 'laradox.console',
+        'middleware' => config('laradox.routing.console.middleware', []),
+        'uses' => 'Http\Controllers\ConsoleController@index',
+    ]
+);
