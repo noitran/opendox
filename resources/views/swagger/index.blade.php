@@ -68,11 +68,10 @@
                 // Build a system
                 const ui = SwaggerUIBundle({
                     dom_id: '#swagger-ui',
-                    url: "{!! $urlToDocs !!}",
+                    url: "<?php echo $documentationFile; ?>",
                     operationsSorter: {!! isset($operationsSorter) ? '"' . $operationsSorter . '"' : 'null' !!},
                     configUrl: {!! isset($additionalConfigUrl) ? '"' . $additionalConfigUrl . '"' : 'null' !!},
                     validatorUrl: {!! isset($validatorUrl) ? '"' . $validatorUrl . '"' : 'null' !!},
-                    oauth2RedirectUrl: "{{ route('swagger-lume.oauth2_callback') }}",
                     presets: [
                         SwaggerUIBundle.presets.apis,
                         SwaggerUIStandalonePreset
