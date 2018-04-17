@@ -61,8 +61,8 @@
 
         <div id="swagger-ui"></div>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.5.0/swagger-ui-bundle.js"> </script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.5.0/swagger-ui-standalone-preset.js"> </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.13.4/swagger-ui-bundle.js"> </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.13.4/swagger-ui-standalone-preset.js"> </script>
         <script>
             window.onload = function() {
                 // Build a system
