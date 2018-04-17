@@ -18,6 +18,6 @@
     </head>
     <body>
         <redoc spec-url='<?php echo $documentationFile; ?>'></redoc>
-        <script src="https://cdn.jsdelivr.net/npm/redoc@2.0.0-alpha.4/bundles/redoc.standalone.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/redoc@2.0.0-alpha.17/bundles/redoc.standalone.js"> </script>
     </body>
 </html>
