@@ -1,25 +1,27 @@
 <?php
 
-namespace Iocaste\Laradox\Http\Controllers;
+namespace Noitran\Opendox\Http\Controllers;
 
 use Illuminate\View\View;
-use Laravel\Lumen\Routing\Controller as BaseController;
+use Illuminate\Routing\Controller;
 
 /**
  * Class UiController
  */
-class UiController extends BaseController
+class UiController extends Controller
 {
     /**
      * @return View
      */
     public function index(): View
     {
-        $settings = config('laradox.documentation_source');
+        $settings = config('opendox.documentation_source');
         $filePath = url('api-docs/' . $settings['filename'] . '.json');
+        $version = config('opendox.frontend.redoc.version');
 
-        return view('laradox::redoc.index', [
+        return view('opendox::redoc.index', [
             'documentationFile' => $filePath,
+            'redocVersion' => $version,
         ]);
     }
 }

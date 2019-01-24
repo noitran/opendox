@@ -1,6 +1,6 @@
 <?php
 
-namespace Iocaste\Laradox\Console;
+namespace Noitran\Opendox\Console;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Yaml\Yaml;
@@ -15,7 +15,7 @@ class TransformDocsCommand extends Command
      *
      * @var string
      */
-    protected $name = 'laradox:transform';
+    protected $name = 'opendox:transform';
 
     /**
      * The console command description.
@@ -32,11 +32,11 @@ class TransformDocsCommand extends Command
     public function handle()
     {
         $this->info('Transforming yaml to json.');
-        $settings = config('laradox.documentation_source');
+        $settings = config('opendox.documentation_source');
 
         if ($settings['extension'] === 'json') {
             $this->info(
-                'Documentation source file in laradox.php is set to "json". conversion will be skipped. Just copying...'
+                'Documentation source file in opendox.php is set to "json". conversion will be skipped. Just copying...'
             );
         }
 
@@ -57,7 +57,7 @@ class TransformDocsCommand extends Command
     protected function convert(string $pathTo, string $fileName, string $fileExtension)
     {
         $contents = $this->transform($pathTo . $fileName . '.' . $fileExtension);
-        $saveToPath = config('laradox.documentation_source.save_to');
+        $saveToPath = config('opendox.documentation_source.save_to');
 
         if (! file_exists($saveToPath)) {
             mkdir($saveToPath);

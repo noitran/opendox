@@ -1,9 +1,9 @@
 <?php
 
-namespace Iocaste\Laradox;
+namespace Noitran\Opendox;
 
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
-use Iocaste\Laradox\Console\TransformDocsCommand;
+use Noitran\Opendox\Console\TransformDocsCommand;
 
 /**
  * Class ServiceProvider
@@ -15,7 +15,7 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     protected function getConfigPath(): string
     {
-        return __DIR__ . '/../config/laradox.php';
+        return __DIR__ . '/../config/opendox.php';
     }
 
     /**
@@ -34,9 +34,9 @@ class ServiceProvider extends IlluminateServiceProvider
     public function boot()
     {
         $viewPath = __DIR__.'/../resources/views';
-        $this->loadViewsFrom($viewPath, 'laradox');
+        $this->loadViewsFrom($viewPath, 'opendox');
 
-        $this->app->router->group(['namespace' => 'Iocaste\Laradox'], function ($router) {
+        $this->app->router->group(['namespace' => 'Noitran\Opendox'], function ($router) {
             require __DIR__.'/routes.php';
         });
     }
@@ -48,15 +48,15 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     public function register()
     {
-        $configPath = __DIR__.'/../config/laradox.php';
-        $this->mergeConfigFrom($configPath, 'laradox');
+        $configPath = __DIR__.'/../config/opendox.php';
+        $this->mergeConfigFrom($configPath, 'opendox');
 
-        $this->app->singleton('command.laradox.transform-docs', function () {
+        $this->app->singleton('command.opendox.transform-docs', function () {
             return new TransformDocsCommand();
         });
 
         $this->commands(
-            'command.laradox.transform-docs'
+            'command.opendox.transform-docs'
         );
     }
 }

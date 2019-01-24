@@ -2,9 +2,29 @@
 
 return [
 
+    'frontend' => [
+        /*
+         * Should swagger be enabled by default
+         */
+        'swagger' => [
+            'enabled' => true,
+
+            'version' => '3.20.5',
+        ],
+
+        /*
+         * Should redoc be enabled by default
+         */
+        'redoc' => [
+            'enabled' => true,
+
+            'version' => 'v2.0.0-rc.1',
+        ],
+    ],
+
     'documentation_source' => [
 
-        /**
+        /*
          * Do conversion from yml to json.
          */
         'convert' => true,
@@ -36,7 +56,7 @@ return [
         /*
          * Absolute path to views directory
          */
-        'path' => base_path('resources/views/vendor/laradox'),
+        'path' => base_path('resources/views/vendor/opendox'),
     ],
 
     'routing' => [

@@ -1,8 +1,9 @@
-Laradox - OpenAPI 3.0 (Swagger 3) package for Lumen 5.5
+Opendox - OpenAPI 3.0 (Swagger 3) package for Lumen and Laravel
 ====================
 
 This package will add console command to lumen and laravel which will parse yml file, convert it into json and save to public path.
 Redoc UI is connected and can be accessed by going to /api/documentation route.
+Swagger is is can be accessed by going to /api/console route.
 
 <p align="center">
 <a href="https://scrutinizer-ci.com/g/iocaste/opendox/code-structure"><img src="https://img.shields.io/scrutinizer/coverage/g/iocaste/opendox.svg?style=flat-square" alt="Coverage Status"></img></a>
@@ -15,6 +16,7 @@ Redoc UI is connected and can be accessed by going to /api/documentation route.
 @todo
 
 * Write readme
-* Currently only lumen is supported
-* Add functional and unit tests
 * Add style.ci, travis-ci, and scrutinizer
+* Authentication
+* Config publish for laravel
+

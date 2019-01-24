@@ -3,7 +3,6 @@
 return PhpCsFixer\Config::create()
     ->setRules([
         '@PSR2' => true,
-
         'array_syntax' => [
             'syntax' => 'short',
         ],
@@ -13,9 +12,7 @@ return PhpCsFixer\Config::create()
         ],
         'binary_operator_spaces' => [
             'align_double_arrow' => false,
-            'align_equals' => false,
         ],
-
         'trailing_comma_in_multiline_array' => true,
         'whitespace_after_comma_in_array' => true,
         'blank_line_after_opening_tag' => true,
@@ -32,7 +29,6 @@ return PhpCsFixer\Config::create()
         'no_unused_imports' => true,
         'phpdoc_align' => false,
         'phpdoc_no_package' => true,
-
         'phpdoc_order' => true,
         'phpdoc_add_missing_param_annotation' => true,
         'method_argument_space' => [

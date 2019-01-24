@@ -1,25 +1,25 @@
 <?php
 
-namespace Iocaste\Laradox\Http\Controllers;
+namespace Noitran\Opendox\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use Laravel\Lumen\Routing\Controller as BaseController;
+use Illuminate\Routing\Controller;
 
 /**
  * Class DocumentationController
  */
-class DocumentationController extends BaseController
+class DocumentationController extends Controller
 {
     /**
      * @return JsonResponse
      */
     public function index(): JsonResponse
     {
-        $settings = config('laradox.documentation_source');
+        $settings = config('opendox.documentation_source');
         $filePath = $settings['save_to'] . '/' . $settings['filename'] . '.json';
 
         if (! file_exists($filePath)) {
-            abort(404, 'Cannot find '.$filePath);
+            abort(404, 'Cannot find ' . $filePath);
         }
 
         $content = json_decode(
