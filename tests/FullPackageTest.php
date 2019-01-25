@@ -16,6 +16,7 @@ class FullPackageTest extends TestCase
     }
 
     /**
+     * @param mixed $fileName
      * @return void
      */
     protected function copyStubFile($fileName): void
