@@ -36,6 +36,14 @@ class ServiceProvider extends IlluminateServiceProvider
         $viewPath = __DIR__.'/../resources/views';
         $this->loadViewsFrom($viewPath, 'opendox');
 
+        $configPath = __DIR__.'/../config/opendox.php';
+        if (function_exists('config_path')) {
+            $publishPath = config_path('opendox.php');
+        } else {
+            $publishPath = base_path('config/opendox.php');
+        }
+        $this->publishes([$configPath => $publishPath], 'config');
+
         $this->app->router->group(['namespace' => 'Noitran\Opendox'], function ($router) {
             require __DIR__.'/routes.php';
         });

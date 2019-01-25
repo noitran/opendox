@@ -9,11 +9,13 @@
          processIsolation="false"
          stopOnFailure="false"
          verbose="true">
-    <testsuite name="Opendox TestSuite">
-        <directory>tests/</directory>
-    </testsuite>
+    <testsuites>
+        <testsuite name="Opendox TestSuite">
+            <directory>tests/</directory>
+        </testsuite>
+    </testsuites>
     <filter>
-        <whitelist>
+        <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">src/</directory>
         </whitelist>
     </filter>

@@ -1,0 +1,18 @@
+build:
+  environment:
+    php: '7.1'
+    hosts:
+      laravel.dev: '127.0.0.1'
+    variables:
+  cache:
+    directories:
+      - vendor/
+      - ~/.composer/cache/
+  dependencies:
+  tests:
+    override:
+      -
+        command: vendor/bin/phpunit --coverage-clover=laravel-test-examples-coverage
+        coverage:
+          file: laravel-test-examples-coverage
+          format: clover
