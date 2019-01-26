@@ -45,7 +45,7 @@ class ServiceProvider extends IlluminateServiceProvider
         $this->publishes([$configPath => $publishPath], 'config');
 
         $this->app->router->group(['namespace' => 'Noitran\Opendox'], function ($router) {
-            require __DIR__.'/routes.php';
+            require __DIR__.'/routes/routes.php';
         });
     }
 
