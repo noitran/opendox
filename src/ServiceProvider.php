@@ -19,14 +19,6 @@ class ServiceProvider extends IlluminateServiceProvider
     }
 
     /**
-     * @return bool
-     */
-    protected function isLumen(): bool
-    {
-        return str_contains($this->app->version(), 'Lumen');
-    }
-
-    /**
      * Add the Cors middleware to the router.
      *
      * @return void
