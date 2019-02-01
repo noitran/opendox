@@ -29,7 +29,7 @@ class TransformDocsCommand extends Command
      *
      * @return void
      */
-    public function handle()
+    public function handle(): void
     {
         $this->info('Transforming yaml to json.');
         $settings = config('opendox.documentation_source');
@@ -54,7 +54,7 @@ class TransformDocsCommand extends Command
      *
      * @return void
      */
-    protected function convert(string $pathTo, string $fileName, string $fileExtension)
+    protected function convert(string $pathTo, string $fileName, string $fileExtension): void
     {
         $contents = $this->transform($pathTo . $fileName . '.' . $fileExtension);
         $saveToPath = config('opendox.documentation_source.save_to');

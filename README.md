@@ -132,7 +132,7 @@ $ php artisan opendox:transform
 ```
 /api/documentation - Redoc UI interface
 
-/api/console - Swagger UI with ability to test API
+/api/console - Swagger UI with ability to send example requests
 
 /docs - Raw JSON documentation output, that can be used for external services
 ```

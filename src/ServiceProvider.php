@@ -23,12 +23,12 @@ class ServiceProvider extends IlluminateServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
-        $viewPath = __DIR__.'/../resources/views';
+        $viewPath = __DIR__ . '/../resources/views';
         $this->loadViewsFrom($viewPath, 'opendox');
 
-        $configPath = __DIR__.'/../config/opendox.php';
+        $configPath = __DIR__ . '/../config/opendox.php';
         if (function_exists('config_path')) {
             $publishPath = config_path('opendox.php');
         } else {
@@ -36,8 +36,8 @@ class ServiceProvider extends IlluminateServiceProvider
         }
         $this->publishes([$configPath => $publishPath], 'config');
 
-        $this->app->router->group(['namespace' => 'Noitran\Opendox'], function ($router) {
-            require __DIR__.'/routes/routes.php';
+        $this->app->router->group(['namespace' => 'Noitran\Opendox'], function ($router): void {
+            require __DIR__ . '/routes/routes.php';
         });
     }
 
@@ -46,9 +46,9 @@ class ServiceProvider extends IlluminateServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
-        $configPath = __DIR__.'/../config/opendox.php';
+        $configPath = __DIR__ . '/../config/opendox.php';
         $this->mergeConfigFrom($configPath, 'opendox');
 
         $this->app->singleton('command.opendox.transform-docs', function () {

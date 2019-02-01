@@ -17,6 +17,7 @@ class FullPackageTest extends TestCase
 
     /**
      * @param mixed $fileName
+     *
      * @return void
      */
     protected function copyStubFile($fileName): void
@@ -44,6 +45,7 @@ class FullPackageTest extends TestCase
 
     /**
      * @test
+     *
      * @throws \Exception
      */
     public function itShouldTestDocsRoute(): void
@@ -57,6 +59,7 @@ class FullPackageTest extends TestCase
 
     /**
      * @test
+     *
      * @throws \Exception
      */
     public function itShouldTestRedocRoute(): void
@@ -70,6 +73,7 @@ class FullPackageTest extends TestCase
 
     /**
      * @test
+     *
      * @throws \Exception
      */
     public function itShouldTestSwaggerRoute(): void
