@@ -3,7 +3,6 @@
 namespace Noitran\Opendox\Tests;
 
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-
 use Noitran\Opendox\ServiceProvider;
 
 /**

@@ -7,7 +7,6 @@ Opendox - OpenAPI 3.0 (Swagger 3) package for Lumen and Laravel
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></img></a>
 <a href="https://github.com/noitran/opendox/releases"><img src="https://img.shields.io/github/release/noitran/opendox.svg?style=flat-square" alt="Latest Version"></img></a>
 <a href="https://packagist.org/packages/iocaste/opendox"><img src="https://img.shields.io/packagist/dt/iocaste/opendox.svg?style=flat-square" alt="Total Downloads"></img></a>
-<a href="#"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
 </p>
 
 ## About
@@ -31,16 +30,26 @@ Also package adds route for raw json documentation output, so this package can b
 $ composer require noitran/opendox
 ```
 
+#### Laravel
+
+* Laravel uses provider auto discovery. Config file can be published using command
+
+```
+$ php artisan vendor:publish --provider="Noitran\Opendox\ServiceProvider"
+```
+
+#### Lumen
+
 * Open your bootstrap/app.php and register as service provider
 
 ```php
 $app->register(Noitran\Opendox\ServiceProvider::class);
 ```
 
-* Laravel: publish config file
+* Config file should be loaded manually in bootstrap/app.php
 
-```bash
-$ artisan vendor:publish --provider="Noitran\Opendox\ServiceProvider"
+```php
+$app->configure('opendox');
 ```
 
 ## Usage
